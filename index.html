@@ -1,0 +1,92 @@
+<!--アルコール分解プロジェクト-->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/saloon.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/saloon.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+      <div class="d-sm-block d-none text-center mt-5">
+          <div class="text-center mb-5">
+            <p id="view_clock"></p>
+          </div>
+        <div class="row mb-5">
+            <div class="col-4 text-center pr-0 pl-0 mr-0 ml-0">
+                <p>体重</p>
+                <textarea></textarea>
+            </div>
+            <div class="col-4 text-center pr-0 pl-0 mr-0 ml-0">
+                <p>年齢</p>
+                <textarea></textarea>
+            </div>
+            <div class="col-4 text-center pr-0 pl-0 mr-0 ml-0">
+                <p>性別</p>
+                <label><input type="checkbox">男性</label><br>
+                <label><input type="checkbox">女性</label>
+            </div>
+          </div>
+          
+          <div class="row mb-2">
+            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
+                <img class="border" src="src/img01.png" alt= "ビール" width="150" height="150">
+            </div>
+            <div class="col-6 text-center pr-0 pl-0 mr-0 ml-0">
+                <input type ="range" min ="0" max ="10" step ="1">
+            </div>
+            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
+                <input type="text" readonly>
+            </div>
+         </div>
+
+         <div class="row mb-2">
+            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
+                <img class="border" src="src/img02.png" alt= "ハイボール" width="150" height="150">
+            </div>
+            <div class="col-6 text-center pr-0 pl-0 mr-0 ml-0">
+                <input type ="range" min ="0" max ="10" step ="1">
+            </div>
+            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
+                <input type="text" readonly>
+            </div>
+         </div>
+
+         <div class="row mb-2">
+            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
+                <img class="border" src="src/img03.png" alt= "ワイン" width="150" height="150">
+            </div>
+            <div class="col-6 text-center pr-0 pl-0 mr-0 ml-0">
+                <input type ="range" min ="0" max ="10" step ="1">
+            </div>
+            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
+                <input type="text" readonly>
+            </div>
+         </div>
+
+         <div class="row mb-2">
+            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
+                <img class="border" src="src/img04.png" alt= "日本酒" width="150" height="150">
+            </div>
+            <div class="col-6 text-center pr-0 pl-0 mr-0 ml-0">
+                <input type ="range" min ="0" max ="10" step ="1">
+            </div>
+            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
+                <input type="text" readonly>
+            </div>
+         </div>
+
+         <div class="mt-5 border-top text-center">
+             <p>計算結果</p>
+         </div>
+      </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
