@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Nahoo! Wiki</title>
+    <!--水色の背景色を画像で指定-->
+    <style>
+      .cover_wiki{
+        background: url(img/wiki_back_image.jpg);
+        background-size: cover_wiki;
+      }
+
+      .cover{
+        background: url(../../img/back_image.png);
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <!--トップメニューアイコン6 + Nahoo!ロゴ + 時刻取得-->
+      <!--アイコン6はSP版では非表示(d-none)-->
+      <section class="text-center bg-white mt-3">
+        <div class="container">
+          <div class="row">
+            <div class="d-none d-md-block col-md-1"><img src="../../img/battle.png" class="img-fluid"><p class="font-weight-light text-primary">バトル</p></div>
+            <div class="d-none d-md-block col-md-1"><img src="../../img/club.jpg" class="img-fluid"><p class="font-weight-light text-primary">クラブ</p></div>
+            <div class="d-none d-md-block col-md-1"><a href="wiki.html"><img src="../../img/wiki.png" class="img-fluid"></a><p class="font-weight-light text-primary">wiki</p></div>
+            <div class="col-sm-6"><a href="../../index.php"><img src="../../img/nahoo_orange.png" class="img-fluid"></a><div class="text-warning font-weight-bold"><a href="wiki.html"><h3>~Wikipedia~</h3></a></div></div>
+            <div class="d-none d-md-block col-md-1"><a href="../finance/finance.html"><img src="../../img/money.png" class="img-fluid"></a><p class="font-weight-light text-primary">金融</p></div>
+            <div class="d-none d-md-block col-md-1"><img src="../../img/game.jpg" class="img-fluid"><p class="font-weight-light text-primary">ゲーム</p></div>
+            <div class="d-none d-md-block col-md-1"><img src="../../img/shopping.png" class="img-fluid"><p class="font-weight-light text-primary">買い物</p></div>
+          </div>
+      </section>
+
+      <!--検索窓-->
+      <section class="text-center mt-0">
+        <div class="cover_wiki container text-black text-center py-3 border border-warning">
+          <form method=get action="http://www.google.co.jp/search" target="_blank" style="margin: 0px;">
+                <font size=-1>
+                  <input type=hidden name=domains value="nahoo.sakura.ne.jp">
+                  <input type=radio name=sitesearch value=""> Google検索 <!--Google検索-->
+                  <input type=radio name=sitesearch value="Nahoo!" checked> Nahoo! wiki検索 <!--wiki内検索方法未定-->
+                </font>
+                <br>
+                <input type=text name=q size=25 maxlength=255 value="">
+                <input type=hidden name=ie value=utf-8>
+                <input type=hidden name=oe value=utf-8>
+                <input type=hidden name=hl value="ja">
+                <input type=submit name=btnG value="検索">   
+          </form>
+        </div>
+      </section>
+
+      <!--コンテンツ群-->
+      <section class="text-center mt-3">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col-sm-4 order-1 order-sm-1"> <!--左カラム-->
+                <!--記事新規作成ボタン-->
+                <div class="w-100">
+                  <div class="container w-100 py-3">
+                    <a href="regist.php"><img src="img/make_button.png" class="img-fluid"></a>
+                  </div>
+                </div>
+
+                <!--カテゴリ一覧-->
+                <div class="w-100 cover_wiki border border-warning">
+                  <div class="container w-100 py-3">
+                    <h4>Category</h4>
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action">キャラクター(Character)</a>
+                      <a href="#" class="list-group-item list-group-item-action">組織(Organization)</a>
+                      <a href="#" class="list-group-item list-group-item-action">用語(Word)</a>
+                      <a href="#" class="list-group-item list-group-item-action">地理(Geography)</a>
+                      <a href="#" class="list-group-item list-group-item-action">統計(Statistics)</a>
+                      <a href="#" class="list-group-item list-group-item-action">その他(Others)</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!--余白用-->
+                <div class="w-100 bg-white">
+                  <div><br></div>
+                </div>
+              </div>
+
+              <div class="col-sm-8 order-2 order-sm-2"> <!--右カラム-->
+
+                <!--新着記事サムネ3つ DBから持ってくる-->
+                <div class="w-100 cover  text-center border border-primary">
+                  <div class="container w-100">
+                    <h2>New!</h2>
+                    <div class="row">
+                      <div class="container bg-white mb-2">
+                        <div class="media">
+                          <img class="mr-3 mt-3" src="img/no_img.png" alt="64x64 image">
+                          <div class="media-body">
+                            <h5 class="mt-0">新着記事①</h5>
+                            Thank You. I am honored to be with you today for your commencement from one of the finest universities in the world. Truth be told I never graduated from college and this is the closest I’ve ever gotten to a college graduation.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container bg-white mb-2">
+                        <div class="media">
+                          <img class="mr-3 mt-3" src="img/no_img.png" alt="64x64 image">
+                          <div class="media-body">
+                            <h5 class="mt-0">新着記事②</h5>
+                            Thank You. I am honored to be with you today for your commencement from one of the finest universities in the world. Truth be told I never graduated from college and this is the closest I’ve ever gotten to a college graduation.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container bg-white">
+                        <div class="media">
+                          <img class="mr-3 mt-3" src="img/no_img.png" alt="64x64 image">
+                          <div class="media-body">
+                            <h5 class="mt-0">新着記事③</h5>
+                            Thank You. I am honored to be with you today for your commencement from one of the finest universities in the world. Truth be told I never graduated from college and this is the closest I’ve ever gotten to a college graduation.
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <!--ランダム記事サムネ3つ DBから持ってくる-->
+                <div class="w-100 cover  text-center">
+                  <div class="container w-100">
+                    <h2>Random</h2>
+                    <div class="row">
+                      <div class="container bg-white mb-2">
+                        <div class="media">
+                          <img class="mr-3 mt-3" src="img/no_img.png" alt="64x64 image">
+                          <div class="media-body">
+                            <h5 class="mt-0">ランダム記事①</h5>
+                            Thank You. I am honored to be with you today for your commencement from one of the finest universities in the world. Truth be told I never graduated from college and this is the closest I’ve ever gotten to a college graduation.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container bg-white mb-2">
+                        <div class="media">
+                          <img class="mr-3 mt-3" src="img/no_img.png" alt="64x64 image">
+                          <div class="media-body">
+                            <h5 class="mt-0">ランダム記事②</h5>
+                            Thank You. I am honored to be with you today for your commencement from one of the finest universities in the world. Truth be told I never graduated from college and this is the closest I’ve ever gotten to a college graduation.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container bg-white mb-2">
+                        <div class="media">
+                          <img class="mr-3 mt-3" src="img/no_img.png" alt="64x64 image">
+                          <div class="media-body">
+                            <h5 class="mt-0">ランダム記事③</h5>
+                            Thank You. I am honored to be with you today for your commencement from one of the finest universities in the world. Truth be told I never graduated from college and this is the closest I’ve ever gotten to a college graduation.
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="text-center text-muted py-4">
+      <a href="http://nahoo.sakura.ne.jp"><p>©︎Nahoo!</p></a>
+    </footer>
+
+
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Nahoo! Develope</title>
+    <!--水色の背景色を画像で指定-->
+    <style>
+      .cover{
+        background: url(../../img/back_image.png);
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="text-center bg-white mt-3">
+        <a href="../../../index.html"><img src="../../../img/nahoo_khaki.png"></a>
+        <a href="../develope_index.html"><h2 class="text-warning" >~Develope~</h2></a>
+      </section>
+      <br>
+      <!-- ------------ここから本文------------------------->
+
+      
+      <dev class="text-center"><h4>echo文</h4></dev>
+      <pre>
+        <code>
+            文字列を出力
+            echo 'Hello World';
+
+            改行する
+            echo 'Hello World' .PHP_EOL;
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>コメントを挿入</h4></dev>
+      <pre>
+        <code>
+            //行末までコメントアウト
+            # 行末までコメントアウト
+            /*
+            複数行コメントアウト
+            */
+
+            *VScode : command+/ で自動コメントアウト
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>$変数</h4></dev>
+      <pre>
+        <code>
+            代入
+            $name = 'Yuki';
+            $age = 27;
+
+            文字列の扱い
+            $sentence = "It's"; 
+
+            文字列に変数を埋め込む
+            $sentence = 'I am $name.';
+
+            グローバル変数
+            grobal $oo;
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>ヒアドキュメント</h4></dev>
+      <pre>
+        <code>
+           長めのテキストを表現し変数を展開しない(ナウドキュメント)
+           $text = <<<'EOT'
+                he default interactive shell is now zsh.
+                To update your account to use zsh, please run `chsh -s /bin/zsh`.
+                For more details, please visit https://support.apple.com/kb/HT208050.
+           EOT;
+
+           長めのテキストを表現し変数を展開する(ヒアドキュメント)
+           $text = <<<"EOT"
+                $name default interactive shell is now zsh.
+                To update your account to use zsh, please run `chsh -s /bin/zsh`.
+                For more details, please visit https://support.apple.com/kb/HT208050.
+           EOT;
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>数値計算</h4></dev>
+      <pre>
+        <code>
+           四則演算 + - * /
+           余り %
+           冪乗 **  //2**3=8
+           2+'3'=5 PHPは文字列を数値として捉える
+
+           $price = 500;
+           $price += 100; = 600
+
+           $price ++; = 501
+           $price --; = 499
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>定数</h4></dev>
+      <pre>
+        <code>
+            2パターンの記法
+           define('NAME','yuki'); *$はつけない 大文字で
+           const NAME = 'yuki'; *$はつけない 大文字で
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>データ型</h4></dev>
+      <pre>
+        <code>
+           文字列(string)  'hello' "hello"
+           整数(int) 5 -20
+           不動小数点(float)  3.2
+           null           null
+           真偽値(bool)    true false
+           配列(array)     [5, 3, 8]
+           オブジェクト(object)   new Object()
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>変数の型を調べる</h4></dev>
+      <pre>
+        <code>
+           var_dump($name); -> string(5) "yuki"   
+           var_dump($age); -> int(27)
+
+           型変換 cast
+           $a = (float)10;
+           $b = (string)0.13;
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>条件分岐</h4></dev>
+      <pre>
+        <code>
+           if (判別式){
+               命令文1;
+           }elseif(判別式2){
+               命令文2;
+           }else{
+               命令文3;
+           }
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>論理演算子</h4></dev>
+      <pre>
+        <code>
+           比較演算子
+           === ~と等しい
+           !== ~と等しくない
+
+           論理演算子
+           $$  = and
+           ||  = or
+           !   = not
+
+           論理演算はtrue, falseで処理される
+           $X 単一変数も真偽値として評価される
+
+           if($X){
+
+           }
+           のように書かれる事もある
+
+           false{
+               false
+               0
+               0.0
+               '0'
+               ''
+               null
+               []
+           }
+           それ以外=true
+
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>switch条件分岐</h4></dev>
+      <pre>
+        <code>
+           switch($aaa){
+               case oo:
+                    命令文1;
+                    break;
+               case oo:
+                    命令文2;
+                    break;
+               case oo:
+                    命令文3;
+                    break;
+           }
+
+           switch($aaa){
+                case oo:
+                    命令文1;
+                    break;
+                case oo:
+                    命令文2;
+                    break;
+                case oo:      //複数条件(または)
+                case xx:
+                    命令文3;
+                    break;
+                default:
+                    デフォルト命令;
+                    break;
+        }
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>for</h4></dev>
+      <pre>
+        <code>
+           for($i = 1; $i <= 5; $i++){
+               echo 'hello';
+           }
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>while/do while</h4></dev>
+      <pre>
+        <code>
+           while($oo > 0){
+               echo $oo;
+               $oo -= 15;
+           }
+
+           do{
+                最低1度実行させたい命令
+           }while($oo > 0);   条件を満たす限り実行
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>continue break</h4></dev>
+      <pre>
+        <code>
+            continue...ループを一回スキップ
+            break...ループを強制終了
+
+            for ($i = 1; $i <= 10; $i++) {
+                if ($i === 4) {
+                  break;
+                }
+                echo $i . PHP_EOL;
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>関数</h4></dev>
+      <pre>
+        <code>
+           function 関数名(){
+               処理内容
+           }
+
+           呼び出し
+           関数名();
+
+           引数
+            function 関数名($引数){
+                処理内容
+            }
+
+            引数の型指定
+            function 関数名(string $引数, int $引数){
+                処理内容
+            }
+            *型が自動変換される
+            *されたくない時は declare(strict_types=1);
+            を先に宣言
+
+            function 関数名($引数 = デフォルト値){   引数なしの時代入される値
+                処理内容
+            }
+
+            return
+            function sum($a, $b, $c){
+                return $a + $b + $c;
+            }
+
+            返り値なし
+            function 関数名(): void{
+
+            }
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>無名関数(クロージャー)</h4></dev>
+      <pre>
+        <code>
+           関数自体を変数に代入する
+           $sum = function sum($a, $b, $c){
+            return $a + $b + $c;
+            };
+
+            実行
+            $sum(1,2,3);
+
+            関数自体を別の関数の引数にできたりする
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>条件演算子</h4></dev>
+      <pre>
+        <code>
+            returnの内容を条件分けする
+
+            $sum = function sum($a, $b, $c){
+                
+                $total = $a + $b + $c;
+                return $total < 0 ? 0 : $total;
+            }
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>null</h4></dev>
+      <pre>
+        <code>
+           nullか別の型かを宣言
+           ?string ...nullかstring
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>配列</h4></dev>
+      <pre>
+        <code>
+           $socores = [90, 40, 100];
+           *インデックスは0から
+           $scores[1] -> 40
+
+           値取得
+           vardump();
+           print_r();
+
+           キー設定
+           $scores = [
+            'first'  => 90, 
+            'second' => 40, 
+            'third'  => 100,
+            ];
+           
+            $scores[third] -> 100
+
+
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>foreach</h4></dev>
+      <pre>
+        <code>
+            foreach ($scores as $value) {
+                echo $value . PHP_EOL;
+              }
+            90
+            40
+            100
+
+            foreach ($scores as $key => $score) {
+                echo $key . ' - ' . $score . PHP_EOL;
+              }
+
+            
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>配列の要素展開</h4></dev>
+      <pre>
+        <code>
+           ...$scores
+           -> 90, 40, 100
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>可変長引数</h4></dev>
+      <pre>
+        <code>
+            何個引数に入っても対応できる(配列化して引数にいれる)
+            function sum(...$numbers)
+            {
+              $total = 0;
+              foreach ($numbers as $number) {
+                $total += $number;
+              }
+              return $total;
+            }
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>複数の返り値</h4></dev>
+      <pre>
+        <code>
+           返り値を配列にして複数の情報を返す
+           function getStats(...$numbers){
+                $total = 0;
+                foreach ($numbers as $number) {
+                    $total += $number;
+                }
+                return [$total, $total / count($numbers)];
+                }
+
+                配列形式で受け取る
+                list($sum, $average) = getStats(1, 3, 5);　もしくは
+                [$sum, $average] = getStats(1, 3, 5)
+        </code>
+      </pre>
+
+    </main>
+
+
+
+    <footer class="text-center text-muted py-4">
+      <a href="http://nahoo.sakura.ne.jp"><p>©︎Nahoo!</p></a>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

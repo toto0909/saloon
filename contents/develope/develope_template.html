@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Nahoo! Develope</title>
+    <!--水色の背景色を画像で指定-->
+    <style>
+      .cover{
+        background: url(../../img/back_image.png);
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="text-center bg-white mt-3">
+        <a href="../../../index.html"><img src="../../../img/nahoo_khaki.png"></a>
+        <a href="../develope_index.html"><h2 class="text-warning" >~Develope~</h2></a>
+      </section>
+      <br>
+      <!-- ------------ここから本文------------------------->
+
+      <dev class="text-center"><h4>四則演算</h4></dev>
+      <pre>
+        <code>
+        var SuperSample = function (config) {
+          this.code = config;
+          return this.code;
+        };
+        var sample = new SuperSample("SAMPLE_STRING");
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>四則演算</h4></dev>
+      <pre>
+        <code>
+        var SuperSample = function (config) {
+          this.code = config;
+          return this.code;
+        };
+        var sample = new SuperSample("SAMPLE_STRING");
+        </code>
+      </pre>
+      
+      
+
+    </main>
+
+
+
+    <footer class="text-center text-muted py-4">
+      <a href="http://nahoo.sakura.ne.jp"><p>©︎Nahoo!</p></a>
+    </footer>
+
+    <script>
+      //<div></div>内のHTMLを取り出し
+          var str = document.getElementById("sample").innerHTML;
+
+
+          //タグを文字実体参照に置き換え
+          str = str.replace(/</g,'＆lt；');
+          str = str.replace(/>/g,'＆gt；');
+
+
+          //<div></div>内のHTMLを呼び出して置き換える
+          document.getElementById("sample").innerHTML = str; 
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
