@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Nahoo!掲示板</title>
+    <!--水色の背景色を画像で指定-->
+    <style>
+      .cover_board{
+        background: url(img/board.jpg);
+        background-size: cover_board;
+      }
+
+      .cover{
+        background: url(../../img/back_image.png);
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <!--トップメニューアイコン6 + Nahoo!ロゴ + 時刻取得-->
+      <!--アイコン6はSP版では非表示(d-none)-->
+      <section class="text-center bg-white mt-3">
+        <div class="container">
+          <div class="row">
+            <div class="d-none d-md-block col-md-1"><img src="../../img/battle.png" class="img-fluid"><p class="font-weight-light text-primary">バトル</p></div>
+            <div class="d-none d-md-block col-md-1"><img src="../../img/club.jpg" class="img-fluid"><p class="font-weight-light text-primary">クラブ</p></div>
+            <div class="d-none d-md-block col-md-1"><a href="../wiki/wiki.html"><img src="../../img/wiki.png" class="img-fluid"></a><p class="font-weight-light text-primary">wiki</p></div>
+            <div class="col-sm-6"><a href="../../index.php"><img src="../../img/nahoo_yg.png" class="img-fluid"></a></div>
+            <div class="d-none d-md-block col-md-1"><a href="../finance/finance.html"><img src="../../img/money.png" class="img-fluid"></a><p class="font-weight-light text-primary">金融</p></div>
+            <div class="d-none d-md-block col-md-1"><img src="../../img/game.jpg" class="img-fluid"><p class="font-weight-light text-primary">ゲーム</p></div>
+            <div class="d-none d-md-block col-md-1"><img src="../../img/shopping.png" class="img-fluid"><p class="font-weight-light text-primary">買い物</p></div>
+          </div>
+      </section>
+      <br>
+
+      <!--検索窓-->
+      <section class="text-center mt-0">
+        <div class="cover_board container text-white text-center py-3 border border-dark">
+            <h4>掲示板</h4>
+          <form method=get action="http://www.google.co.jp/search" target="_blank" style="margin: 0px;">
+                <font size=-1>
+                  <input type=hidden name=domains value="nahoo.sakura.ne.jp">
+                  <input type=radio name=sitesearch value=""> Google検索 <!--Google検索-->
+                  <input type=radio name=sitesearch value="Nahoo!" checked> スレタイ検索 <!--wiki内検索方法未定-->
+                </font>
+                <br>
+                <input type=text name=q size=25 maxlength=255 value="">
+                <input type=hidden name=ie value=utf-8>
+                <input type=hidden name=oe value=utf-8>
+                <input type=hidden name=hl value="ja">
+                <input type=submit name=btnG value="検索">   
+          </form>
+        </div>
+      </section>
+
+      <!--コンテンツ群-->
+      
+        <div class="container text-center">
+            <div class="row">
+              <div class="col-sm-4 order-2"> <!--左カラム-->
+
+    <section class="text-center mt-3">
+
+                
+                <!--カテゴリ一覧-->
+                <div class="w-100 cover_board border-dark">
+                  <div class="container w-100 py-3 text-white">
+                    <h4>Category</h4>
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">ネタ・雑談<span class="badge badge-primary badge-pill">488</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">ニュース<span class="badge badge-primary badge-pill">144</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">政治経済<span class="badge badge-primary badge-pill">101</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">社会<span class="badge badge-primary badge-pill">54</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">テレビ・実況<span class="badge badge-primary badge-pill">273</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">会社・職業<span class="badge badge-primary badge-pill">47</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">学校<span class="badge badge-primary badge-pill">110</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">科学<span class="badge badge-primary badge-pill">87</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">生活<span class="badge badge-primary badge-pill">207</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">地域<span class="badge badge-primary badge-pill">40</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">スポーツ<span class="badge badge-primary badge-pill">78</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">乗り物<span class="badge badge-primary badge-pill">56</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">趣味<span class="badge badge-primary badge-pill">70</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">食べ物<span class="badge badge-primary badge-pill">34</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">生活<span class="badge badge-primary badge-pill">28</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">地域<span class="badge badge-primary badge-pill">20</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">芸能<span class="badge badge-primary badge-pill">188</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">アイドル<span class="badge badge-primary badge-pill">90</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">音楽<span class="badge badge-primary badge-pill">120</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">漫画・小説<span class="badge badge-primary badge-pill">331</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">ゲーム<span class="badge badge-primary badge-pill">205</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">映画<span class="badge badge-primary badge-pill">117</span></a>
+                      <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">恋愛<span class="badge badge-primary badge-pill">21</span></a>
+                      
+                    </div>
+
+                </div>
+                </div>
+
+
+                <!--余白用-->
+                <div class="w-100 bg-white">
+                  <div><br></div>
+                </div>
+              </div>
+
+              <div class="col-sm-8 order-1 order-sm-1"> <!--右カラム-->
+               
+                    <!--pop画像-->
+                    <section>
+                        <div class="container text-center">
+                            <div class="w-100 h-100"><img src="img/nahoo_pop.png" class="img-fluid"></div>
+                        </div>
+                    </section> 
+              </div>
+
+                
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="text-center text-muted py-4">
+      <a href="http://nahoo.sakura.ne.jp"><p>©︎Nahoo!</p></a>
+    </footer>
+
+
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

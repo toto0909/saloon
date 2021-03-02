@@ -1,92 +1,194 @@
-<!--アルコール分解プロジェクト-->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Saloon!</title>
+    <!--水色の背景色を画像で指定-->
+    <style>
+      .cover{
+        /*background: url(img/back_pink.jpg);*/
+        background-color: #cbffd3;
+        background-size: cover;
+      }
+    </style>
+  </head>
 
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="js/saloon.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/saloon.css">
-</head>
-
-<body>
-    <header></header>
+  <body>
     <main>
-      <div class="d-sm-block d-none text-center mt-5">
-          <div class="text-center mb-5">
-            <p id="view_clock"></p>
+      <!--トップメニューアイコン6 + Nahoo!ロゴ + 時刻取得-->
+      <!--アイコン6はSP版では非表示(d-none)-->
+      <section class="text-center bg-white mt-3">
+        <div class="container">
+          <div class="row">
+            <div class="d-none d-md-block col-md-1"><img src="img/battle.png" class="img-fluid"><p class="font-weight-light text-primary">バトル</p></div>
+            <div class="d-none d-md-block col-md-1"><img src="img/club.jpg" class="img-fluid"><p class="font-weight-light text-primary">クラブ</p></div>
+            <div class="d-none d-md-block col-md-1"><a href="contents/wiki/wiki.html"><img src="img/wiki.png" class="img-fluid"></a><p class="font-weight-light text-primary">wiki</p></div>
+            <div class="col-sm-6"><a href="index.php"><img src="img/Saloon.png" class="img-fluid"></a><div class="text-success font-weight-bold"><span id="view_clock"></span></div></div>
+            <div class="d-none d-md-block col-md-1"><a href="contents/finance/finance.html"><img src="img/money.png" class="img-fluid"></a><p class="font-weight-light text-primary">金融</p></div>
+            <div class="d-none d-md-block col-md-1"><img src="img/game.jpg" class="img-fluid"><p class="font-weight-light text-primary">ゲーム</p></div>
+            <div class="d-none d-md-block col-md-1"><img src="img/shopping.png" class="img-fluid"><p class="font-weight-light text-primary">買い物</p></div>
           </div>
-        <div class="row mb-5">
-            <div class="col-4 text-center pr-0 pl-0 mr-0 ml-0">
-                <p>体重</p>
-                <textarea></textarea>
+      </section>
+
+
+      <!--検索窓-->
+      <section class="text-center mt-0">
+        <div class="cover container text-black text-center py-3 border border-success">
+          <form method=get action="http://www.google.co.jp/search" target="_blank" style="margin: 0px;">
+                
+                
+                <input type=text name=q size=25 maxlength=255 value="">
+                <input type=hidden name=ie value=utf-8>
+                <input type=hidden name=oe value=utf-8>
+                <input type=hidden name=hl value="ja">
+                <input type=submit name=btnG value="検索">   
+          </form>
+        </div>
+      </section>
+
+
+      <!--コンテンツ群-->
+      <section class="text-center mt-3">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col-sm-4 order-2 order-sm-1"> <!--左カラム-->
+               
+
+                <!--余白用-->
+                <div class="w-100 bg-white">
+                  <div><br></div>
+                </div>
+
+                
+                <!--余白用-->
+                <div class="w-100 bg-white">
+                  <div><br></div>
+                </div>
+
+              </div>
+
+              <div class="col-sm-4 order-1 order-sm-2"> <!--中央カラム-->
+                <!--トップニュース-->
+                <!--新着記事サムネ3つ DBから持ってくる-->
+                <div class="w-100 cover  text-center">
+                  <div class="container w-100  border border-success">
+                    <h5>トップニュース</h5>
+                    <div class="row">
+                      <div class="container bg-white mb-2">
+                        <div class="media">
+                          <img class="mr-3 mt-1 mb-1" src="img/no_img.png" alt="64x64 image">
+                          <div class="media-body">                           
+                            This is sample article. After develope this, new article will be setted  here. Thank you.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container bg-white mb-2">
+                        <div class="media">
+                          <img class="mr-3 mt-1 mb-1" src="img/no_img.png" alt="64x64 image">
+                          <div class="media-body">
+                          This is sample article. After develope this, new article will be setted  here. Thank you.  
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container bg-white mb-2">
+                        <div class="media">
+                          <img class="mr-3 mt-1 mb-1" src="img/no_img.png" alt="64x64 image">
+                          <div class="media-body">
+                          This is sample article. After develope this, new article will be setted  here. Thank you.
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <!--余白用-->
+                <div class="w-100 bg-white">
+                  <div><br></div>
+                </div>
+              
+               <!--天気(weather.php呼び出し)-->
+               <div class="w-100 cover mb-3 border border-success">
+                <h5>天気</h5>
+                <div class="container w-100 mt-1 py-0 bg-white">
+                  <?php include('./weather.php'); ?>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">天気</th>
+                        <th scope="col">気温</th>
+                        <th scope="col">湿度</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="https://openweathermap.org/city/1857519">松本市</a></th>
+                        <td><?php echo get_json("icon",1); ?></td>
+                        <td><?php echo get_json("temp",1); ?>℃</td>
+                        <td><?php echo get_json("humidity",1); ?>%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="https://openweathermap.org/city/1863431">秦野市</a></th>
+                        <td><?php echo get_json("icon",4); ?></td>
+                        <td><?php echo get_json("temp",4); ?>℃</td>
+                        <td><?php echo get_json("humidity",4); ?>%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+              </div>
+              </div>
             </div>
-            <div class="col-4 text-center pr-0 pl-0 mr-0 ml-0">
-                <p>年齢</p>
-                <textarea></textarea>
-            </div>
-            <div class="col-4 text-center pr-0 pl-0 mr-0 ml-0">
-                <p>性別</p>
-                <label><input type="checkbox">男性</label><br>
-                <label><input type="checkbox">女性</label>
-            </div>
+            <a class="twitter-timeline" data-width="500" data-height="650" href="https://twitter.com/_torikizoku?ref_src=twsrc%5Etfw">Tweets by _torikizoku</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
-          
-          <div class="row mb-2">
-            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
-                <img class="border" src="src/img01.png" alt= "ビール" width="150" height="150">
-            </div>
-            <div class="col-6 text-center pr-0 pl-0 mr-0 ml-0">
-                <input type ="range" min ="0" max ="10" step ="1">
-            </div>
-            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
-                <input type="text" readonly>
-            </div>
-         </div>
+        </div>
+      </section>
 
-         <div class="row mb-2">
-            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
-                <img class="border" src="src/img02.png" alt= "ハイボール" width="150" height="150">
-            </div>
-            <div class="col-6 text-center pr-0 pl-0 mr-0 ml-0">
-                <input type ="range" min ="0" max ="10" step ="1">
-            </div>
-            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
-                <input type="text" readonly>
-            </div>
-         </div>
-
-         <div class="row mb-2">
-            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
-                <img class="border" src="src/img03.png" alt= "ワイン" width="150" height="150">
-            </div>
-            <div class="col-6 text-center pr-0 pl-0 mr-0 ml-0">
-                <input type ="range" min ="0" max ="10" step ="1">
-            </div>
-            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
-                <input type="text" readonly>
-            </div>
-         </div>
-
-         <div class="row mb-2">
-            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
-                <img class="border" src="src/img04.png" alt= "日本酒" width="150" height="150">
-            </div>
-            <div class="col-6 text-center pr-0 pl-0 mr-0 ml-0">
-                <input type ="range" min ="0" max ="10" step ="1">
-            </div>
-            <div class="col-3 text-center pr-0 pl-0 mr-0 ml-0">
-                <input type="text" readonly>
-            </div>
-         </div>
-
-         <div class="mt-5 border-top text-center">
-             <p>計算結果</p>
-         </div>
-      </div>
     </main>
-    <footer></footer>
-</body>
 
+    <footer class="text-center text-muted py-4">
+      <a href="http://takeda.saloon.jp"><p>©︎Saloon!</p></a>
+    </footer>
+
+
+    <!--日付取得関数-->
+    <script type="text/javascript">
+      timerID = setInterval('clock()',500); //0.5秒毎にclock()を実行
+      
+      function clock() {
+        document.getElementById("view_clock").innerHTML = getNow();
+      }
+      
+      function getNow() {
+        var now = new Date();
+        var year = now.getFullYear();
+        var mon = now.getMonth()+1; //１を足すこと
+        var day = now.getDate();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+        var you = now.getDay(); //曜日(0～6=日～土)
+
+        var youbi = new Array("日","月","火","水","木","金","土");
+      
+        //出力用
+        var s = year + "年" + mon + "月" + day + "日(" + youbi[you] + ")" + hour + "時" + min + "分" + sec + "秒"; 
+        return s;
+      }
+      </script>
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>

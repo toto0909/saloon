@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Nahoo! Develope</title>
+    <!--水色の背景色を画像で指定-->
+    <style>
+      .cover{
+        background: url(../../img/back_image.png);
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="text-center bg-white mt-3">
+        <a href="../../../index.html"><img src="../../../img/nahoo_khaki.png"></a>
+        <a href="../develope_index.html"><h2 class="text-warning" >~Develope~</h2></a>
+      </section>
+      <br>
+      <!-- ------------ここから本文------------------------->
+
+      <dev class="text-center"><h4>PHP公式ドキュメント</h4></dev>
+      <pre>
+        <code>
+            <a href="https://www.php.net/manual/ja/index.php"><h5>PHP公式ドキュメント(日本語)</h5></a>
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>String</h4></dev>
+      <pre>
+        <code>
+            <a href="https://www.php.net/manual/ja/book.strings.php"><h5>String関数</h5></a>
+                addcslashes — C 言語と同様にスラッシュで文字列をクォートする
+                addslashes — 文字列をスラッシュでクォートする
+                bin2hex — バイナリのデータを16進表現に変換する
+                chop — rtrim のエイリアス
+                chr — 数値から、1バイトの文字列を生成する
+                chunk_split — 文字列をより小さな部分に分割する
+                convert_cyr_string — キリル文字セットを他のものに変換する
+                convert_uudecode — uuencode された文字列をデコードする
+                convert_uuencode — 文字列を uuencode する
+                count_chars — 文字列で使用されている文字に関する情報を返す
+                crc32 — 文字列の crc32 多項式計算を行う
+                crypt — 文字列の一方向のハッシュ化を行う
+                echo — 1 つ以上の文字列を出力する
+                explode — 文字列を文字列により分割する
+                fprintf — フォーマットされた文字列をストリームに書き込む
+                get_html_translation_table — htmlspecialchars および htmlentities で使用される変換テーブルを返す
+                hebrev — 論理表記のヘブライ語を物理表記に変換する
+                hebrevc — 論理表記のヘブライ語を、改行の変換も含めて物理表記に変換する
+                hex2bin — 16進エンコードされたバイナリ文字列をデコードする
+                html_entity_decode — HTML エンティティを対応する文字に変換する
+                htmlentities — 適用可能な文字を全て HTML エンティティに変換する
+                htmlspecialchars_decode — 特殊な HTML エンティティを文字に戻す
+                htmlspecialchars — 特殊文字を HTML エンティティに変換する
+                implode — 配列要素を文字列により連結する
+                join — implode のエイリアス
+                lcfirst — 文字列の最初の文字を小文字にする
+                levenshtein — 二つの文字列のレーベンシュタイン距離を計算する
+                localeconv — 数値に関するフォーマット情報を得る
+                ltrim — 文字列の最初から空白 (もしくはその他の文字) を取り除く
+                md5_file — 指定したファイルのMD5ハッシュ値を計算する
+                md5 — 文字列のmd5ハッシュ値を計算する
+                metaphone — 文字列の metaphone キーを計算する
+                money_format — 数値を金額文字列にフォーマットする
+                nl_langinfo — 言語およびロケール情報を検索する
+                nl2br — 改行文字の前に HTML の改行タグを挿入する
+                number_format — 数字を千位毎にグループ化してフォーマットする
+                ord — 文字列の先頭バイトを、0 から 255 までの値に変換する
+                parse_str — 文字列を処理し、変数に代入する
+                print — 文字列を出力する
+                printf — フォーマット済みの文字列を出力する
+                quoted_printable_decode — quoted-printable 文字列を 8 ビット文字列に変換する
+                quoted_printable_encode — 8 ビット文字列を quoted-printable 文字列に変換する
+                quotemeta — メタ文字をクォートする
+                rtrim — 文字列の最後から空白 (もしくはその他の文字) を取り除く
+                setlocale — ロケール情報を設定する
+                sha1_file — ファイルの sha1 ハッシュを計算する
+                sha1 — 文字列の sha1 ハッシュを計算する
+                similar_text — 二つの文字列の間の類似性を計算する
+                soundex — 文字列の soundex キーを計算する
+                sprintf — フォーマットされた文字列を返す
+                sscanf — フォーマット文字列に基づき入力を処理する
+                str_getcsv — CSV 文字列をパースして配列に格納する
+                str_ireplace — 大文字小文字を区別しない str_replace
+                str_pad — 文字列を固定長の他の文字列で埋める
+                str_repeat — 文字列を反復する
+                str_replace — 検索文字列に一致したすべての文字列を置換する
+                str_rot13 — 文字列に rot13 変換を行う
+                str_shuffle — 文字列をランダムにシャッフルする
+                str_split — 文字列を配列に変換する
+                str_word_count — 文字列に使用されている単語についての情報を返す
+                strcasecmp — 大文字小文字を区別しないバイナリセーフな文字列比較を行う
+                strchr — strstr のエイリアス
+                strcmp — バイナリセーフな文字列比較
+                strcoll — ロケールに基づく文字列比較
+                strcspn — マスクにマッチしない最初のセグメントの長さを返す
+                strip_tags — 文字列から HTML および PHP タグを取り除く
+                stripcslashes — addcslashes でクォートされた文字列をアンクォートする
+                stripos — 大文字小文字を区別せずに文字列が最初に現れる位置を探す
+                stripslashes — クォートされた文字列のクォート部分を取り除く
+                stristr — 大文字小文字を区別しない strstr
+                strlen — 文字列の長さを得る
+                strnatcasecmp — "自然順"アルゴリズムにより大文字小文字を区別しない文字列比較を行う
+                strnatcmp — "自然順"アルゴリズムにより文字列比較を行う
+                strncasecmp — バイナリセーフで大文字小文字を区別しない文字列比較を、最初の n 文字について行う
+                strncmp — 最初の n 文字についてバイナリセーフな文字列比較を行う
+                strpbrk — 文字列の中から任意の文字を探す
+                strpos — 文字列内の部分文字列が最初に現れる場所を見つける
+                strrchr — 文字列中に文字が最後に現れる場所を取得する
+                strrev — 文字列を逆順にする
+                strripos — 文字列中で、特定の(大文字小文字を区別しない)文字列が最後に現れた位置を探す
+                strrpos — 文字列中に、ある部分文字列が最後に現れる場所を探す
+                strspn — 指定したマスク内に含まれる文字からなる文字列の最初のセグメントの長さを探す
+                strstr — 文字列が最初に現れる位置を見つける
+                strtok — 文字列をトークンに分割する
+                strtolower — 文字列を小文字にする
+                strtoupper — 文字列を大文字にする
+                strtr — 文字の変換あるいは部分文字列の置換を行う
+                substr_compare — 指定した位置から指定した長さの 2 つの文字列について、バイナリ対応で比較する
+                substr_count — 副文字列の出現回数を数える
+                substr_replace — 文字列の一部を置換する
+                substr — 文字列の一部分を返す
+                trim — 文字列の先頭および末尾にあるホワイトスペースを取り除く
+                ucfirst — 文字列の最初の文字を大文字にする
+                ucwords — 文字列の各単語の最初の文字を大文字にする
+                vfprintf — フォーマットされた文字列をストリームに書き込む
+                vprintf — フォーマットされた文字列を出力する
+                vsprintf — フォーマットされた文字列を返す
+                wordwrap — 指定した文字数で文字列を分割する
+        </code>
+      </pre>
+      
+      <dev class="text-center"><h4>Math関数</h4></dev>
+      <pre>
+        <code>
+        <a href="https://www.php.net/manual/ja/ref.math.php"><h5>Math</h5></a>
+                abs — 絶対値
+                acos — 逆余弦（アークコサイン）
+                acosh — 逆双曲線余弦（アークハイパボリックコサイン）
+                asin — 逆正弦（アークサイン）
+                asinh — 逆双曲線正弦（アークハイパボリックサイン）
+                atan2 — 2 変数のアークタンジェント
+                atan — 逆正接（アークタンジェント）
+                atanh — 逆双曲線正接（アークハイパボリックタンジェント）
+                base_convert — 数値の基数を任意に変換する
+                bindec — 2 進数 を 10 進数に変換する
+                ceil — 端数の切り上げ
+                cos — 余弦（コサイン）
+                cosh — 双曲線余弦（ハイパボリックコサイン）
+                decbin — 10 進数を 2 進数に変換する
+                dechex — 10 進数を 16 進数に変換する
+                decoct — 10 進数を 8 進数に変換する
+                deg2rad — 度単位の数値をラジアン単位に変換する
+                exp — e の累乗を計算する
+                expm1 — 値がゼロに近い時にでも精度を保つために exp(number) - 1 を返す
+                floor — 端数の切り捨て
+                fmod — 引数で除算をした際の剰余を返す
+                getrandmax — 乱数の最大値を取得する
+                hexdec — 16 進数を 10 進数に変換する
+                hypot — 直角三角形の斜辺の長さを計算する
+                intdiv — 整数値の除算
+                is_finite — 値が有限の数値であるかどうかを判定する
+                is_infinite — 値が無限大であるかどうかを判定する
+                is_nan — 値が非数かどうかを判定する
+                lcg_value — 複合線形合同法
+                log10 — 底が 10 の対数
+                log1p — 値がゼロに近い時にでも精度を保つ方法で計算した log(1 + number) を返す
+                log — 自然対数
+                max — 最大値を返す
+                min — 最小値を返す
+                mt_getrandmax — 乱数値の最大値を表示する
+                mt_rand — メルセンヌ・ツイスター乱数生成器を介して乱数値を生成する
+                mt_srand — メルセンヌ・ツイスター乱数生成器にシードを指定する
+                octdec — 8 進数を 10 進数に変換する
+                pi — 円周率の値を得る
+                pow — 指数表現
+                rad2deg — ラジアン単位の数値を度単位に変換する
+                rand — 乱数を生成する
+                round — 浮動小数点数を丸める
+                sin — 正弦（サイン）
+                sinh — 双曲線正弦（ハイパボリックサイン）
+                sqrt — 平方根
+                srand — 乱数生成器を初期化する
+                tan — 正接（タンジェント）
+                tanh — 双曲線正接（ハイパボリックタンジェント）
+                
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>PHP公式ドキュメント</h4></dev>
+      <pre>
+        <code>
+           
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>PHP公式ドキュメント</h4></dev>
+      <pre>
+        <code>
+           
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>PHP公式ドキュメント</h4></dev>
+      <pre>
+        <code>
+           
+        </code>
+      </pre>
+
+      <dev class="text-center"><h4>PHP公式ドキュメント</h4></dev>
+      <pre>
+        <code>
+           
+        </code>
+      </pre>
+      
+
+    </main>
+
+
+
+    <footer class="text-center text-muted py-4">
+      <a href="http://nahoo.sakura.ne.jp"><p>©︎Nahoo!</p></a>
+    </footer>
+
+    <script>
+      //<div></div>内のHTMLを取り出し
+          var str = document.getElementById("sample").innerHTML;
+
+
+          //タグを文字実体参照に置き換え
+          str = str.replace(/</g,'＆lt；');
+          str = str.replace(/>/g,'＆gt；');
+
+
+          //<div></div>内のHTMLを呼び出して置き換える
+          document.getElementById("sample").innerHTML = str; 
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
